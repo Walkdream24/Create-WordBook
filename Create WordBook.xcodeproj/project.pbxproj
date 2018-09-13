@@ -12,6 +12,11 @@
 		14072EB5214798CC00540482 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14072EB3214798CC00540482 /* Main.storyboard */; };
 		14072EB7214798CD00540482 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14072EB6214798CD00540482 /* Assets.xcassets */; };
 		14072EBA214798CD00540482 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14072EB8214798CD00540482 /* LaunchScreen.storyboard */; };
+		14072ECA2147A12700540482 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14072EC92147A12700540482 /* ListTableViewCell.swift */; };
+		14072ECC2147B27200540482 /* MyWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14072ECB2147B27200540482 /* MyWord.swift */; };
+		14072ECE2147B8EB00540482 /* wordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14072ECD2147B8EB00540482 /* wordDetailViewController.swift */; };
+		141348522148E0BC00341505 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141348512148E0BC00341505 /* ListViewController.swift */; };
+		308483F7662BDD8CE2133908 /* Pods_Create_WordBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A39C9AFF82000D2CB3F50197 /* Pods_Create_WordBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,13 @@
 		14072EB6214798CD00540482 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14072EB9214798CD00540482 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14072EBB214798CD00540482 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14072EC92147A12700540482 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		14072ECB2147B27200540482 /* MyWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWord.swift; sourceTree = "<group>"; };
+		14072ECD2147B8EB00540482 /* wordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordDetailViewController.swift; sourceTree = "<group>"; };
+		141348512148E0BC00341505 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		1AB38ABE4A0DB3A8283C5571 /* Pods-Create WordBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Create WordBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-Create WordBook/Pods-Create WordBook.release.xcconfig"; sourceTree = "<group>"; };
+		9A39D4A39408B691EE7E1FEF /* Pods-Create WordBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Create WordBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Create WordBook/Pods-Create WordBook.debug.xcconfig"; sourceTree = "<group>"; };
+		A39C9AFF82000D2CB3F50197 /* Pods_Create_WordBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Create_WordBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308483F7662BDD8CE2133908 /* Pods_Create_WordBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +53,8 @@
 			children = (
 				14072EAE214798CC00540482 /* Create WordBook */,
 				14072EAD214798CC00540482 /* Products */,
+				DBC0A4F78CE8C9B4A6431A97 /* Pods */,
+				1B25C5EEA130C99A90C11B4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +70,10 @@
 			isa = PBXGroup;
 			children = (
 				14072EAF214798CC00540482 /* AppDelegate.swift */,
+				141348512148E0BC00341505 /* ListViewController.swift */,
+				14072ECD2147B8EB00540482 /* wordDetailViewController.swift */,
+				14072ECB2147B27200540482 /* MyWord.swift */,
+				14072EC92147A12700540482 /* ListTableViewCell.swift */,
 				14072EB1214798CC00540482 /* ViewController.swift */,
 				14072EB3214798CC00540482 /* Main.storyboard */,
 				14072EB6214798CD00540482 /* Assets.xcassets */,
@@ -64,6 +83,23 @@
 			path = "Create WordBook";
 			sourceTree = "<group>";
 		};
+		1B25C5EEA130C99A90C11B4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A39C9AFF82000D2CB3F50197 /* Pods_Create_WordBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBC0A4F78CE8C9B4A6431A97 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A39D4A39408B691EE7E1FEF /* Pods-Create WordBook.debug.xcconfig */,
+				1AB38ABE4A0DB3A8283C5571 /* Pods-Create WordBook.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14072EBE214798CD00540482 /* Build configuration list for PBXNativeTarget "Create WordBook" */;
 			buildPhases = (
+				0F20BD88A33E9C309020B733 /* [CP] Check Pods Manifest.lock */,
 				14072EA8214798CC00540482 /* Sources */,
 				14072EA9214798CC00540482 /* Frameworks */,
 				14072EAA214798CC00540482 /* Resources */,
+				216CC20FBA445B60D0C92755 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +168,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F20BD88A33E9C309020B733 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Create WordBook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		216CC20FBA445B60D0C92755 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Create WordBook/Pods-Create WordBook-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Create WordBook/Pods-Create WordBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		14072EA8214798CC00540482 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14072ECE2147B8EB00540482 /* wordDetailViewController.swift in Sources */,
 				14072EB2214798CC00540482 /* ViewController.swift in Sources */,
+				141348522148E0BC00341505 /* ListViewController.swift in Sources */,
+				14072ECC2147B27200540482 /* MyWord.swift in Sources */,
 				14072EB0214798CC00540482 /* AppDelegate.swift in Sources */,
+				14072ECA2147A12700540482 /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +361,7 @@
 		};
 		14072EBF214798CD00540482 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A39D4A39408B691EE7E1FEF /* Pods-Create WordBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +380,7 @@
 		};
 		14072EC0214798CD00540482 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AB38ABE4A0DB3A8283C5571 /* Pods-Create WordBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
