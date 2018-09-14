@@ -14,7 +14,9 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     
     var myWordList: [myWordObject] = []
-    var searchController = UISearchController()
+    
+    
+    //var searchController = UISearchController()
     
     @IBOutlet weak var listTableView: UITableView!
 
@@ -24,28 +26,28 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         listTableView.delegate = self
         listTableView.dataSource = self
         
-        searchController = UISearchController(searchResultsController: nil)
-        searchController.searchResultsUpdater = self as? UISearchResultsUpdating
-        searchController.searchBar.sizeToFit()
-        searchController.dimsBackgroundDuringPresentation = false
-        searchController.hidesNavigationBarDuringPresentation = false
-        
-        listTableView.tableHeaderView = searchController.searchBar
-        
-        
+//        searchController = UISearchController(searchResultsController: nil)
+//        searchController.searchResultsUpdater = self as? UISearchResultsUpdating
+//        searchController.searchBar.sizeToFit()
+//        searchController.dimsBackgroundDuringPresentation = false
+//        searchController.hidesNavigationBarDuringPresentation = false
+//        
+//        listTableView.tableHeaderView = searchController.searchBar
+//        
+//        
     }
-    func updateSearchResult(for SearchController: UISearchController) {
-        let predicate = NSPredicate(format: "wordName CONTAINS %@", searchController.searchBar.text!)
-        let realm = try! Realm()
-        let wordObj = realm.objects(myWordObject.self).filter(predicate)
-        myWordList = []
-        wordObj.forEach { (word) in
-            myWordList.append(word)
-        }
-        listTableView.reloadData()
-        
-        
-    }
+//    func updateSearchResult(for SearchController: UISearchController) {
+//        let predicate = NSPredicate(format: "wordName CONTAINS %@", searchController.searchBar.text!)
+//        let realm = try! Realm()
+//        let wordObj = realm.objects(myWordObject.self).filter(predicate)
+//        myWordList = []
+//        wordObj.forEach { (word) in
+//            myWordList.append(word)
+//        }
+//        listTableView.reloadData()
+//
+//
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -73,26 +75,41 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return myWordList.count
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        
-        if editingStyle == .delete {
-            
-            
-            let realm = try! Realm()
-            try! realm.write {
-                realm.delete(self.myWordList[indexPath.row])
-            }
-            listTableView.reloadData()
-        }
-
-           
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    
+            let realm = try! Realm()
+            try! realm.write {
+                realm.delete(myWordList[indexPath.row])
+            }
+
+                myWordList.remove(at: indexPath.row)
+                listTableView.deleteRows(at: [indexPath], with: .fade)
+        
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        listTableView.deselectRow(at: indexPath, animated: true)
+        self.present(DetailViewController(), animated: true, completion: nil)
+        
+        
+        
+    }
+    
+   
     
     @IBAction func createButton(_ sender: Any) {
         performSegue(withIdentifier: "create", sender: self)
     }
-
+    
+    func modalDidFinished(SearchResultReturn: NSArray) {
+        myWordList = SearchResultReturn as! [myWordObject]
+        listTableView.reloadData()
+    }
+    
+   
 
    
 }
