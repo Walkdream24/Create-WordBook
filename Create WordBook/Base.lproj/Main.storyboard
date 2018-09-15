@@ -39,35 +39,56 @@
                         <viewLayoutGuide key="safeArea" id="sEy-Wk-7Uq"/>
                     </view>
                     <navigationItem key="navigationItem" id="Z0F-Cj-EkN">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="mfy-vM-Ijm">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="zVd-jv-1dI">
                             <connections>
-                                <action selector="createButton:" destination="CDO-eF-Kym" id="U7c-SF-O85"/>
+                                <action selector="createButton:" destination="CDO-eF-Kym" id="FXw-Y2-ocv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="listTableView" destination="YY4-KI-BeA" id="SRs-dL-ju6"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="create" id="CAs-ZH-1kV"/>
+                        <segue destination="67M-mm-SCh" kind="show" identifier="toDetailController" id="Zuk-xt-AIb"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="create" id="Dxz-9Q-BuS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NIw-YN-Ktu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1288.8" y="101.19940029985008"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="Rfi-Fh-0vi">
             <objects>
-                <viewController id="67M-mm-SCh" sceneMemberID="viewController">
+                <viewController id="67M-mm-SCh" customClass="DetailViewController" customModule="Create_WordBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xB7-oY-USI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oGy-1H-Gt4">
+                                <rect key="frame" x="0.0" y="184" width="375" height="287"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="mainBlueColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMz-rh-DvM">
+                                <rect key="frame" x="0.0" y="116" width="138" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fNO-y8-09i"/>
                     </view>
+                    <connections>
+                        <outlet property="detailTextView" destination="oGy-1H-Gt4" id="3vB-gg-vOD"/>
+                        <outlet property="wordLabel" destination="EMz-rh-DvM" id="JMO-g6-c16"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AlQ-C4-UnJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1289" y="847"/>
+            <point key="canvasLocation" x="1288.8" y="846.9265367316342"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -88,13 +109,13 @@
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWY-Y3-QO5">
                                 <rect key="frame" x="77" y="124" width="220" height="55"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <color key="textColor" name="mainYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Detail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFO-mp-qks">
                                 <rect key="frame" x="77" y="302" width="220" height="65"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <color key="textColor" name="mainYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -172,6 +193,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="mainBlueColor">
+            <color red="0.0" green="0.82700002189999999" blue="0.92900002000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="mainYellowColor">
             <color red="1" green="0.74900001289999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
