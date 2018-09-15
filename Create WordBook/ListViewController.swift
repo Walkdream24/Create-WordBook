@@ -14,11 +14,14 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     
     var myWordList: [myWordObject] = []
-    
+    var selectWord: String!
+   
     
     //var searchController = UISearchController()
     
     @IBOutlet weak var listTableView: UITableView!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,25 +91,35 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
                 myWordList.remove(at: indexPath.row)
                 listTableView.deleteRows(at: [indexPath], with: .fade)
+     
         
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        performSegue(withIdentifier: "toDetailController", sender: myWordList[indexPath.row].wordDetail)
+        selectWord = myWordList[indexPath.row].wordName
         listTableView.deselectRow(at: indexPath, animated: true)
-        self.present(DetailViewController(), animated: true, completion: nil)
-        
-        
-        
+       
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toDetailController") {
+            let detailVC : DetailViewController = (segue.destination as? DetailViewController)!
+            detailVC.getDetail = sender as! String
+            detailVC.getWord = selectWord 
+            
+            
+            
+           
+            
+        }
     }
     
+    
+
    
     
     @IBAction func createButton(_ sender: Any) {
         performSegue(withIdentifier: "create", sender: self)
-    }
-    
-    func modalDidFinished(SearchResultReturn: NSArray) {
-        myWordList = SearchResultReturn as! [myWordObject]
-        listTableView.reloadData()
     }
     
    
