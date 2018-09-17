@@ -9,15 +9,15 @@
 import UIKit
 import RealmSwift
 
-class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UISearchControllerDelegate,UISearchResultsUpdating {
    
     
     
     var myWordList: [myWordObject] = []
     var selectWord: String!
-   
     
-    //var searchController = UISearchController()
+    var searchController = UISearchController()
+   
     
     @IBOutlet weak var listTableView: UITableView!
     
@@ -28,29 +28,30 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         listTableView.delegate = self
         listTableView.dataSource = self
+        searchSet()
         
-//        searchController = UISearchController(searchResultsController: nil)
-//        searchController.searchResultsUpdater = self as? UISearchResultsUpdating
-//        searchController.searchBar.sizeToFit()
-//        searchController.dimsBackgroundDuringPresentation = false
-//        searchController.hidesNavigationBarDuringPresentation = false
-//        
-//        listTableView.tableHeaderView = searchController.searchBar
-//        
-//        
+ 
     }
-//    func updateSearchResult(for SearchController: UISearchController) {
-//        let predicate = NSPredicate(format: "wordName CONTAINS %@", searchController.searchBar.text!)
-//        let realm = try! Realm()
-//        let wordObj = realm.objects(myWordObject.self).filter(predicate)
-//        myWordList = []
-//        wordObj.forEach { (word) in
-//            myWordList.append(word)
-//        }
-//        listTableView.reloadData()
-//
-//
-//    }
+    func searchSet() {
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        self.navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = true
+        
+    }
+    func updateSearchResults(for SearchController: UISearchController) {
+        let predicate = NSPredicate(format: "wordName CONTAINS %@", searchController.searchBar.text!)
+        let realm = try! Realm()
+        let wordObj = realm.objects(myWordObject.self).filter(predicate)
+        myWordList = []
+        wordObj.forEach { (word) in
+            myWordList.append(word)
+        }
+        listTableView.reloadData()
+    }
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -58,6 +59,8 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        
         
         let realm = try! Realm()
         let wordObj = realm.objects(myWordObject.self)
@@ -96,8 +99,11 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
-        performSegue(withIdentifier: "toDetailController", sender: myWordList[indexPath.row].wordDetail)
         selectWord = myWordList[indexPath.row].wordName
+        performSegue(withIdentifier: "toDetailController", sender: myWordList[indexPath.row].wordDetail)
+        
+     
+        
         listTableView.deselectRow(at: indexPath, animated: true)
        
     }
@@ -105,23 +111,21 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         if (segue.identifier == "toDetailController") {
             let detailVC : DetailViewController = (segue.destination as? DetailViewController)!
             detailVC.getDetail = sender as! String
-            detailVC.getWord = selectWord 
-            
-            
-            
+            detailVC.getWord = selectWord
            
+          
             
         }
     }
-    
+
     
 
    
     
-    @IBAction func createButton(_ sender: Any) {
-        performSegue(withIdentifier: "create", sender: self)
-    }
-    
+//   @IBAction func createButton(_ sender: Any) {
+//        performSegue(withIdentifier: "create", sender: self)
+//    }
+//
    
 
    

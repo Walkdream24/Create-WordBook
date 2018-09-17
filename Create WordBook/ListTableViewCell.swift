@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import FoldingCell
 
-class ListTableViewCell: UITableViewCell {
+class ListTableViewCell: FoldingCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        backgroundColor = UIColor.clear
+       
+    }
+    
+    override func animationDuration(_ itemIndex: NSInteger, type: FoldingCell.AnimationType) -> TimeInterval {
+        let durations = [0.26, 0.2, 0.2]
+        return durations[itemIndex]
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -9,6 +9,8 @@
 import UIKit
 
 class wordDetailViewController: UIViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

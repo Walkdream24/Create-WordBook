@@ -10,12 +10,15 @@
 		14072EB0214798CC00540482 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14072EAF214798CC00540482 /* AppDelegate.swift */; };
 		14072EB2214798CC00540482 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14072EB1214798CC00540482 /* ViewController.swift */; };
 		14072EB5214798CC00540482 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14072EB3214798CC00540482 /* Main.storyboard */; };
-		14072EB7214798CD00540482 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14072EB6214798CD00540482 /* Assets.xcassets */; };
 		14072EBA214798CD00540482 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14072EB8214798CD00540482 /* LaunchScreen.storyboard */; };
 		14072ECA2147A12700540482 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14072EC92147A12700540482 /* ListTableViewCell.swift */; };
 		14072ECC2147B27200540482 /* MyWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14072ECB2147B27200540482 /* MyWord.swift */; };
-		14072ECE2147B8EB00540482 /* wordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14072ECD2147B8EB00540482 /* wordDetailViewController.swift */; };
 		141348522148E0BC00341505 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141348512148E0BC00341505 /* ListViewController.swift */; };
+		142125E6214BC39C0072527B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142125E5214BC39C0072527B /* DetailViewController.swift */; };
+		1430E432214E1D5000EA5AAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1430E431214E1D5000EA5AAD /* Assets.xcassets */; };
+		1430E436214E265D00EA5AAD /* GN-Koharuiro_Sunray.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1430E435214E265D00EA5AAD /* GN-Koharuiro_Sunray.ttf */; };
+		14CD213B214E2ADF003739D0 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 14CD213A214E2ADF003739D0 /* back.png */; };
+		14DDE96E214E1A8000B03676 /* GN-Koharu-iro_Sunray in Resources */ = {isa = PBXBuildFile; fileRef = 14DDE96D214E1A8000B03676 /* GN-Koharu-iro_Sunray */; };
 		308483F7662BDD8CE2133908 /* Pods_Create_WordBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A39C9AFF82000D2CB3F50197 /* Pods_Create_WordBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,13 +27,16 @@
 		14072EAF214798CC00540482 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14072EB1214798CC00540482 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		14072EB4214798CC00540482 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		14072EB6214798CD00540482 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14072EB9214798CD00540482 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14072EBB214798CD00540482 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14072EC92147A12700540482 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		14072ECB2147B27200540482 /* MyWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWord.swift; sourceTree = "<group>"; };
-		14072ECD2147B8EB00540482 /* wordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordDetailViewController.swift; sourceTree = "<group>"; };
 		141348512148E0BC00341505 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		142125E5214BC39C0072527B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		1430E431214E1D5000EA5AAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../Yestudy!/Yestudy!/Assets.xcassets"; sourceTree = "<group>"; };
+		1430E435214E265D00EA5AAD /* GN-Koharuiro_Sunray.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GN-Koharuiro_Sunray.ttf"; path = "Create WordBook/GN-Koharu-iro_Sunray/GN-Koharuiro_Sunray.ttf"; sourceTree = "<group>"; };
+		14CD213A214E2ADF003739D0 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		14DDE96D214E1A8000B03676 /* GN-Koharu-iro_Sunray */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "GN-Koharu-iro_Sunray"; sourceTree = "<group>"; };
 		1AB38ABE4A0DB3A8283C5571 /* Pods-Create WordBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Create WordBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-Create WordBook/Pods-Create WordBook.release.xcconfig"; sourceTree = "<group>"; };
 		9A39D4A39408B691EE7E1FEF /* Pods-Create WordBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Create WordBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Create WordBook/Pods-Create WordBook.debug.xcconfig"; sourceTree = "<group>"; };
 		A39C9AFF82000D2CB3F50197 /* Pods_Create_WordBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Create_WordBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +57,7 @@
 		14072EA3214798CC00540482 = {
 			isa = PBXGroup;
 			children = (
+				1430E435214E265D00EA5AAD /* GN-Koharuiro_Sunray.ttf */,
 				14072EAE214798CC00540482 /* Create WordBook */,
 				14072EAD214798CC00540482 /* Products */,
 				DBC0A4F78CE8C9B4A6431A97 /* Pods */,
@@ -69,15 +76,17 @@
 		14072EAE214798CC00540482 /* Create WordBook */ = {
 			isa = PBXGroup;
 			children = (
+				14CD213A214E2ADF003739D0 /* back.png */,
+				14DDE96D214E1A8000B03676 /* GN-Koharu-iro_Sunray */,
 				14072EAF214798CC00540482 /* AppDelegate.swift */,
 				141348512148E0BC00341505 /* ListViewController.swift */,
-				14072ECD2147B8EB00540482 /* wordDetailViewController.swift */,
+				142125E5214BC39C0072527B /* DetailViewController.swift */,
 				14072ECB2147B27200540482 /* MyWord.swift */,
 				14072EC92147A12700540482 /* ListTableViewCell.swift */,
 				14072EB1214798CC00540482 /* ViewController.swift */,
 				14072EB3214798CC00540482 /* Main.storyboard */,
-				14072EB6214798CD00540482 /* Assets.xcassets */,
 				14072EB8214798CD00540482 /* LaunchScreen.storyboard */,
+				1430E431214E1D5000EA5AAD /* Assets.xcassets */,
 				14072EBB214798CD00540482 /* Info.plist */,
 			);
 			path = "Create WordBook";
@@ -160,8 +169,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1430E436214E265D00EA5AAD /* GN-Koharuiro_Sunray.ttf in Resources */,
+				14DDE96E214E1A8000B03676 /* GN-Koharu-iro_Sunray in Resources */,
+				14CD213B214E2ADF003739D0 /* back.png in Resources */,
+				1430E432214E1D5000EA5AAD /* Assets.xcassets in Resources */,
 				14072EBA214798CD00540482 /* LaunchScreen.storyboard in Resources */,
-				14072EB7214798CD00540482 /* Assets.xcassets in Resources */,
 				14072EB5214798CC00540482 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,11 +206,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Create WordBook/Pods-Create WordBook-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FoldingCell/FoldingCell.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
@@ -214,12 +228,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14072ECE2147B8EB00540482 /* wordDetailViewController.swift in Sources */,
 				14072EB2214798CC00540482 /* ViewController.swift in Sources */,
 				141348522148E0BC00341505 /* ListViewController.swift in Sources */,
 				14072ECC2147B27200540482 /* MyWord.swift in Sources */,
 				14072EB0214798CC00540482 /* AppDelegate.swift in Sources */,
 				14072ECA2147A12700540482 /* ListTableViewCell.swift in Sources */,
+				142125E6214BC39C0072527B /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

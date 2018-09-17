@@ -25,6 +25,10 @@ class ViewController: UIViewController,UITextFieldDelegate {
         detailTextField.delegate = self
         
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
         
     }
     
@@ -39,7 +43,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func saveButton(_ sender: Any) {
         newWordIDAndSave()
-        performSegue(withIdentifier: "see", sender: self)
+        
         
         
     }
