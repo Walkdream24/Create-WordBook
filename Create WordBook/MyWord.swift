@@ -13,8 +13,35 @@ class myWordObject: Object {
     @objc dynamic var wordName: String = ""
     @objc dynamic var wordDetail: String = ""
     @objc dynamic var id: Int = 0
+    @objc dynamic private var _image: UIImage? = nil
+    @objc dynamic var image: UIImage? {
+        set {
+            self._image = newValue
+            if let value = newValue {
+                self.imageData = UIImagePNGRepresentation(value)
+            }
+            
+        }
+        get {
+            if let image = self._image {
+                return image
+            }
+            if let data = self.imageData {
+                self._image = UIImage(data: data)
+                return self._image
+            }
+            return nil
+        }
+    }
+    @objc dynamic var imageData: Data? = nil
+    
+ 
     
     override static func primaryKey() -> String {
         return "id"
+    }
+    
+    override static func ignoredProperties() -> [String] {
+        return["image", "_image"]
     }
 }
